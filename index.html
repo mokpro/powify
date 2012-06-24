@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Powify by sethvargo</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Powify</h1>
+        <h2>Powify is an easy-to-use wrapper for 37 signal's pow</h2>
+        <a href="https://github.com/sethvargo/powify" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>Powify</h1>
+
+<p>Powify is a management tool for <a href="http://pow.cx/">Pow</a> by 37 signals. It allows you to easily install, update, and manage pow and pow applications seamlessly. To get started, read the installation section below.</p>
+
+<h2>Installation</h2>
+
+<p>Install powify using the <code>gem</code> command:</p>
+
+<pre><code>gem install powify
+</code></pre>
+
+<h2>Important Notes</h2>
+
+<p>Powify assumes that your current working directory has the same basename as Pow app. For example, if my site was in:</p>
+
+<pre><code>/Users/sethvargo/Development/my_site
+</code></pre>
+
+<p>Powify would expect the name of the Pow app to also be <code>my_site</code> (the name of the symlink). This is the default behavior if you just use the command <code>powify create</code>. However, it's feasible that you would want a different name that the folder. If this is the case, you'll always need to specify the name of the application like this:</p>
+
+<pre><code>powify restart foo
+powify destroy foo
+powify move foo new_foo
+</code></pre>
+
+<h3>FAQ</h3>
+
+<p>Q: But Seth, why don't you just search the <code>~/.pow</code> directory and grab the symlink that points to the current directory?</p>
+
+<p>A: Because it's inefficient and it could cause a problem if the same Pow apps are symlinked multiple times under different names, Powify could accidentally perform an operation on the wrong one.</p>
+
+<p>Q: Why don't you just add a hidden file to the project directory when someone creates the app, then you'll know what the symlinked is named.</p>
+
+<p>A: What happens when the same app is symlinked multiple times under a different name? I also hate when applications create files randomly on my hard drive.</p>
+
+<h2>Usage</h2>
+
+<div class="highlight">
+<pre>SERVER COMMANDS
+  powify server install            install pow server
+  powify server reinstall          reinstall pow server
+  powify server update             update pow server
+  powify server uninstall          uninstall pow server
+  powify server list               list all pow apps
+  powify server start              start the pow server
+  powify server stop               stop the pow server
+  powify server restart            restart the pow server
+  powify server host               adds all pow apps to /etc/hosts file
+  powify server unhost             removes all pow apps from /etc/hosts file
+  powify server status             print the current server status
+  powify server config             print the current server configuration
+  powify server logs               tails the pow server logs
+
+UTILS COMMANDS
+  powify utils install             install powify.dev server management tool
+  powify utils reinstall           reinstall powify.dev server management tool
+  powify utils uninstall           uninstall powify.dev server management tool
+
+APP COMMANDS
+  powify create <span class="o">[</span>NAME<span class="o">]</span>             creates a pow app from the current directory
+  powify destroy <span class="o">[</span>NAME<span class="o">]</span>            destroys the pow app linked to the current directory
+  powify restart <span class="o">[</span>NAME<span class="o">]</span>            restarts the pow app linked to the current directory
+  powify always_restart <span class="o">[</span>NAME<span class="o">]</span>     reload the pow app after each request
+  powify always_restart_off <span class="o">[</span>NAME<span class="o">]</span> <span class="k">do </span>not reload the pow app after each request
+  powify rename <span class="o">[</span>NAME<span class="o">]</span>             rename the pow app to <span class="o">[</span>NAME<span class="o">]</span>
+  powify rename <span class="o">[</span>OLD<span class="o">]</span> <span class="o">[</span>NEW<span class="o">]</span>        rename the pow app <span class="o">[</span>OLD<span class="o">]</span> to <span class="o">[</span>NEW<span class="o">]</span>
+  powify environment <span class="o">[</span>ENV<span class="o">]</span>         run the this pow app in a different environment <span class="o">(</span>aliased <span class="sb">`</span>env<span class="sb">`</span><span class="o">)</span>
+  powify browse <span class="o">[</span>NAME<span class="o">]</span>             opens and navigates the default browser to this app
+  powify logs <span class="o">[</span>NAME<span class="o">]</span>               tail the application logs
+</pre>
+</div>
+
+
+<h2>Contribution</h2>
+
+<ul>
+<li>9/2 <a href="https://github.com/lindblom">@lindblom</a> - author of <code>host</code> and <code>unhost</code>
+</li>
+<li>10/29 <a href="https://github.com/warwickp">@warwickp</a> - wrote <code>always_restart_off</code>
+</li>
+</ul><p>If you would like to contribute, fork and send me a pull request.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/sethvargo/powify/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/sethvargo/powify/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/sethvargo/powify"></a> is maintained by <a href="https://github.com/sethvargo">sethvargo</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-12012976-14");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
