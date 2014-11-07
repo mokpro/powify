@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -16,27 +17,23 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1 class="header">Powify</h1>
-        <p class="header">Powify is an easy-to-use wrapper for 37 signal's pow</p>
-
+        <h1>Powify</h1>
+        <p>Powify is an easy-to-use wrapper for 37 signal&#39;s pow</p>
+        <p class="view"><a href="https://github.com/sethvargo/powify">View the Project on GitHub <small>sethvargo/powify</small></a></p>
         <ul>
-          <li class="download"><a class="buttons" href="https://github.com/sethvargo/powify/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/sethvargo/powify/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/sethvargo/powify">View On GitHub</a></li>
+          <li><a href="https://github.com/sethvargo/powify/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/sethvargo/powify/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/sethvargo/powify">View On <strong>GitHub</strong></a></li>
         </ul>
-
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/sethvargo">sethvargo</a></p>
-
-
       </header>
       <section>
         <h1>
-<a name="powify" class="anchor" href="#powify"><span class="octicon octicon-link"></span></a>Powify</h1>
+<a id="powify" class="anchor" href="#powify" aria-hidden="true"><span class="octicon octicon-link"></span></a>Powify</h1>
 
 <p>Powify is a management tool for <a href="http://pow.cx/">Pow</a> by 37 signals. It allows you to easily install, update, and manage pow and pow applications seamlessly. To get started, read the installation section below.</p>
 
 <h2>
-<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
 <p>Install powify using the <code>gem</code> command:</p>
 
@@ -44,7 +41,7 @@
 </code></pre>
 
 <h2>
-<a name="important-notes" class="anchor" href="#important-notes"><span class="octicon octicon-link"></span></a>Important Notes</h2>
+<a id="important-notes" class="anchor" href="#important-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Important Notes</h2>
 
 <p>Powify assumes that your current working directory has the same basename as Pow app. For example, if my site was in:</p>
 
@@ -59,7 +56,7 @@ powify move foo new_foo
 </code></pre>
 
 <h3>
-<a name="faq" class="anchor" href="#faq"><span class="octicon octicon-link"></span></a>FAQ</h3>
+<a id="faq" class="anchor" href="#faq" aria-hidden="true"><span class="octicon octicon-link"></span></a>FAQ</h3>
 
 <p>Q: But Seth, why don't you just search the <code>~/.pow</code> directory and grab the symlink that points to the current directory?</p>
 
@@ -70,7 +67,7 @@ powify move foo new_foo
 <p>A: What happens when the same app is symlinked multiple times under a different name? I also hate when applications create files randomly on my hard drive.</p>
 
 <h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <div class="highlight highlight-bash"><pre>SERVER COMMANDS
   powify server install            install pow server
@@ -93,39 +90,42 @@ UTILS COMMANDS
   powify utils uninstall           uninstall powify.dev server management tool
 
 APP COMMANDS
-  powify create <span class="o">[</span>NAME<span class="o">]</span>             creates a pow app from the current directory
-  powify destroy <span class="o">[</span>NAME<span class="o">]</span>            destroys the pow app linked to the current directory
-  powify restart <span class="o">[</span>NAME<span class="o">]</span>            restarts the pow app linked to the current directory
-  powify always_restart <span class="o">[</span>NAME<span class="o">]</span>     reload the pow app after each request
-  powify always_restart_off <span class="o">[</span>NAME<span class="o">]</span> <span class="k">do </span>not reload the pow app after each request
-  powify rename <span class="o">[</span>NAME<span class="o">]</span>             rename the pow app to <span class="o">[</span>NAME<span class="o">]</span>
-  powify rename <span class="o">[</span>OLD<span class="o">]</span> <span class="o">[</span>NEW<span class="o">]</span>        rename the pow app <span class="o">[</span>OLD<span class="o">]</span> to <span class="o">[</span>NEW<span class="o">]</span>
-  powify environment <span class="o">[</span>ENV<span class="o">]</span>         run the this pow app in a different environment <span class="o">(</span>aliased <span class="sb">`</span>env<span class="sb">`</span><span class="o">)</span>
-  powify browse <span class="o">[</span>NAME<span class="o">]</span>             opens and navigates the default browser to this app
-  powify logs <span class="o">[</span>NAME<span class="o">]</span>               tail the application logs
-</pre></div>
+  powify create [NAME]             creates a pow app from the current directory
+  powify destroy [NAME]            destroys the pow app linked to the current directory
+  powify restart [NAME]            restarts the pow app linked to the current directory
+  powify always_restart [NAME]     reload the pow app after each request
+  powify always_restart_off [NAME] <span class="k">do</span> not reload the pow app after each request
+  powify rename [NAME]             rename the pow app to [NAME]
+  powify rename [OLD] [NEW]        rename the pow app [OLD] to [NEW]
+  powify environment [ENV]         run the this pow app <span class="k">in</span> a different environment (aliased <span class="si">`env`</span>)
+  powify browse [NAME]             opens and navigates the default browser to this app
+  powify xip [NAME]                opens and navigates the default browser to this app on xip.io
+  powify logs [NAME]               tail the application logs</pre></div>
 
 <h2>
-<a name="important-notes-1" class="anchor" href="#important-notes-1"><span class="octicon octicon-link"></span></a>Important Notes</h2>
+<a id="important-notes-1" class="anchor" href="#important-notes-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Important Notes</h2>
 
 <p>The server commands for <code>start</code> and <code>stop</code> <strong>only</strong> stop the Pow process. They do not modify the existing firewall rules. If you need to disable the firewall rules, please <code>uninstall</code> and <code>install</code> to re-activate.</p>
 
 <h2>
-<a name="contribution" class="anchor" href="#contribution"><span class="octicon octicon-link"></span></a>Contribution</h2>
+<a id="contribution" class="anchor" href="#contribution" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contribution</h2>
 
 <ul>
 <li>9/2 <a href="https://github.com/lindblom">@lindblom</a> - author of <code>host</code> and <code>unhost</code>
 </li>
 <li>10/29 <a href="https://github.com/warwickp">@warwickp</a> - wrote <code>always_restart_off</code>
 </li>
-</ul><p>If you would like to contribute, fork and send me a pull request.</p>
+</ul>
+
+<p>If you would like to contribute, fork and send me a pull request.</p>
       </section>
-      <footer>
-        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
-      </footer>
     </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/sethvargo">sethvargo</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		          <script type="text/javascript">
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
